@@ -53,6 +53,12 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={clsx('col col--12')}>
+          <p className={styles.title}>Placeholder Title</p>
+        </div>
+        <div className={clsx('col col--12')}>
+          <p className={styles.description}>Some very long placeholder description for airt.........................................</p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

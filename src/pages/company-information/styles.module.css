@@ -7,13 +7,13 @@
 
 .header {
   font-size: 4rem;
-  line-height: 1em;
+  text-align: left;
 }
-.description {
-  font-size: 1.2rem;
+
+.bold {
+  text-decoration: underline;
 }
-.notes {
-  font-size: 0.8rem;
-  margin-top: 1em;
-  opacity: 0.9;
+.reducedLineHeight {
+  line-height: 0.6em;
+  font-size: 1rem;
 }

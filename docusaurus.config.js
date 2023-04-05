@@ -110,41 +110,49 @@ const config = {
             className: "header-github-link",
             "aria-label": "GitHub repository",
           },
-          // {
-          //   href: 'https://twitter.com/airt_AI',
-          //   position: 'right',
-          //   className: "header-twitter-link",
-          //   "aria-label": "Twitter Home Page",
-          // },
-          // {
-          //   href: 'https://www.facebook.com/airt.ai.api',
-          //   position: 'right',
-          //   className: "header-facebook-link",
-          //   "aria-label": "Facebook Home Page",
-          // },
-          // {
-          //   href: 'https://www.linkedin.com/company/airt-ai',
-          //   position: 'right',
-          //   className: "header-linkedin-link",
-          //   "aria-label": "LinkedIn Home Page",
-          // },
+          {
+            href: 'https://twitter.com/airt_AI',
+            position: 'right',
+            className: "header-twitter-link",
+            "aria-label": "Twitter Home Page",
+          },
+          {
+            href: 'https://www.facebook.com/airt.ai.api',
+            position: 'right',
+            className: "header-facebook-link",
+            "aria-label": "Facebook Home Page",
+          },
+          {
+            href: 'https://www.linkedin.com/company/airt-ai',
+            position: 'right',
+            className: "header-linkedin-link",
+            "aria-label": "LinkedIn Home Page",
+          },
         ],
       },
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
+          // {
+          //   title: 'Docs',
+          //   items: [
+          //     {
+          //       label: 'Tutorial',
+          //       to: '/docs/intro',
+          //     },
+          //   ],
+          // },
           {
             title: 'Community',
             items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/airtai',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/airt_AI',
+              },
               {
                 label: 'Facebook',
                 href: 'https://www.facebook.com/airt.ai.api/',
@@ -153,22 +161,22 @@ const config = {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/company/airt-ai/',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/airt_AI',
-              },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'About Us',
+                to: 'about-us',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/airtai',
+                label: 'Contact',
+                to: 'contact',
+              },
+              {
+                label: 'Company information',
+                to: 'company-information',
               },
             ],
           },
