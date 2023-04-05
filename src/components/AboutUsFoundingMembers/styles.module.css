@@ -1,0 +1,16 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.profilePic {
+  height: auto;
+  width: 200px;
+}
+
+.header {
+  font-size: 60px;
+  text-align: center;
+}
