@@ -9,6 +9,23 @@
   position: relative;
   overflow: hidden;
 }
+.heroText {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+.heroTextAnimate {
+  font-size: 4rem;
+}
+.heroDescriptionText {
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+.heroNotes {
+  font-size: 0.9rem;
+  margin-top: 1em;
+  opacity: 0.9;
+}
 
 @media screen and (max-width: 996px) {
   .heroBanner {

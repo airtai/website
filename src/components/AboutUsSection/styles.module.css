@@ -1,0 +1,19 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.header {
+  font-size: 4rem;
+  line-height: 1em;
+}
+.description {
+  font-size: 1.2rem;
+}
+.notes {
+  font-size: 0.9rem;
+  margin-top: 1em;
+  opacity: 0.9;
+}

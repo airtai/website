@@ -1,0 +1,35 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.title {
+  font-size: 2.3rem;
+  text-align: center;
+}
+.description {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.form{
+  text-align: center;
+}
+.formInput {
+  padding: calc( var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier) ) calc( var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier) );
+  display: inline-block;
+  font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+  font-weight: var(--ifm-button-font-weight);
+  line-height: 1.5;
+  border: var(--ifm-button-border-width) solid var(--ifm-button-border-color);
+  border-radius: var(--ifm-button-border-radius);
+  vertical-align: middle;
+  white-space: nowrap;
+  white-space: nowrap;
+  height: 47px;
+  margin-right: 20px;
+  width: 20rem;
+}
