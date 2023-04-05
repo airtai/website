@@ -16,3 +16,9 @@
   margin-right: 20px;
   width: 20rem;
 }
+
+@media screen and (max-width: 996px) {
+  .formInput {
+    margin: 20px;
+  }
+}
