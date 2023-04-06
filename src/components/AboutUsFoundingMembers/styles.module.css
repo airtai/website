@@ -14,3 +14,16 @@
   font-size: 60px;
   text-align: center;
 }
+
+.linkContainer {
+  text-align: center;
+}
+
+.linkItems {
+  display: inline-block;
+  margin: 0 10px;
+}
+.linkItems:before {
+  width: 24px;
+  height: 24px;
+}
