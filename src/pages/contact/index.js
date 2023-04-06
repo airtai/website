@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 
 export default function Hello() {
   return (
-    <Layout title="Hello" description="Hello React Page">
+    <Layout title="Contact" description="Contact">
       <section className={`hero hero--primary ${styles.containerWithMinHeight}`}>
       <div className="container">
         <div className="row">

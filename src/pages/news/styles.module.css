@@ -1,0 +1,21 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.header {
+  font-size: 3rem;
+  text-align: left;
+}
+.styledHr {
+  margin: 70px 0;
+  height: 2px;
+}
+.wrapper {
+  margin-top: 100px;
+}
+.img {
+  border: 1px solid;
+}
