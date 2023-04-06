@@ -96,12 +96,12 @@ const config = {
               },
             ]
           },
-          // {
-          //   href: 'https://www.linkedin.com/company/airt-ai',
-          //   position: 'right',
-          //   className: "header-discord-link",
-          //   "aria-label": "Discord Link",
-          // },
+          {
+            href: 'https://discord.gg/CJWmYpyFbc',
+            position: 'right',
+            className: "header-discord-link",
+            "aria-label": "Discord Link",
+          },
           {
             href: 'https://github.com/airtai',
             position: 'right',
@@ -143,6 +143,10 @@ const config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/CJWmYpyFbc',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/airtai',

@@ -270,7 +270,7 @@ const NewsList = [
       "Project proposal “Smart damage detection” is implemented with the goal of adjustment and market launch of two innovative products intended for automation of damage detection and processing in industrial environments.",
     link: "https://airt.ai/eu-funded-project",
     imgSrc:
-      "https://images.squarespace-cdn.com/content/v1/5d9d87ed4412b87c774803cf/1598514032874-DW8HHGQW7AGYISL1Q657/Smart+damage+detection+preview.png",
+      "img/EU_logo_vertical_stripe_black_background.png",
   },
   {
     header: "AI in telco industry",
