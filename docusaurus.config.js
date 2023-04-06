@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'airt',
-  tagline: 'AI MADE EASY',
+  tagline: 'AI in motion',
   favicon: 'img/AIRT_icon_blue.svg',
 
   // Set the production url of your site here
@@ -41,9 +41,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -82,7 +80,7 @@ const config = {
               },
             ]
           },
-          {to: '/blog', label: 'News', position: 'right'},
+          {to: 'news', label: 'News', position: 'right'},
           {
             type: 'dropdown',
             label: 'About',

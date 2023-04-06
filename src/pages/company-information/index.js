@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export default function Hello() {
   return (
-    <Layout title="Hello" description="Hello React Page">
+    <Layout title="Company information" description="Company information">
       <section className="hero hero--primary">
       <div className="container">
         <div className="row">
