@@ -389,7 +389,7 @@ function NewsItem({ index, header, description, link, imgSrc }) {
           <img className={styles.img} src={imgSrc} />
         </div>
         <div className="col col--6">
-          <p className={styles.header}>{header}</p>
+          <h2 className={styles.header}>{header}</h2>
           <p>{description}</p>
           {renderLinkButton(link)}
         </div>

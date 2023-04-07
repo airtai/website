@@ -10,8 +10,8 @@ export default function HomepageFeatures() {
         <div className="row">
           <div className={clsx('col col--6')}>
             <div className="text--left padding-horiz--md">
-              <p className={styles.header}>Pointing out the</p>
-              <p className={styles.header}>future.</p>
+              <h2 className={styles.header}>Pointing out the</h2>
+              <h2 className={styles.header}>future.</h2>
             </div>
           </div>
           <div className={clsx('col col--6')}>

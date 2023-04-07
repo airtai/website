@@ -70,7 +70,7 @@ export default function AboutUsFoundingMembers() {
       <div className="container">
         <div className="row">
           <div className="col col--12">
-            <p className={styles.header}>Meet the founding team</p>
+            <h2 className={styles.header}>Meet the founding team</h2>
           </div>
         </div>
         <div className="row">
