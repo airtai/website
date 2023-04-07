@@ -11,10 +11,10 @@ const config = {
   favicon: 'img/AIRT_icon_blue.svg',
 
   // Set the production url of your site here
-  url: 'https://airt.github.io/',
+  url: 'http://www.airt.ai/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/website/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
