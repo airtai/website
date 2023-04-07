@@ -33,11 +33,11 @@ function HomepageHeader() {
             speed={{type: 'keyStrokeDelayInMs', value: 100}}
           />
          in motion</h1>
-        <p className={styles.heroDescriptionText}><em>airt</em> is an open-source deep learning platform for streaming data</p>
+        <p className={styles.heroDescriptionText}><em>airt</em> is an AI-powered framework for streaming app development</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="https://github.com/airtai">
+            to="https://fastkafka.airt.ai">
               Get Started
           </Link>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
-      <HomepageStayTuned />
+      {/* <HomepageStayTuned /> */}
     </Layout>
   );
 }
