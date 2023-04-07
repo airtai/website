@@ -58,7 +58,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
-      <HomepageStayTuned />
+      {/* <HomepageStayTuned /> */}
     </Layout>
   );
 }

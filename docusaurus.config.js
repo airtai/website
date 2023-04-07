@@ -91,9 +91,13 @@ const config = {
                 to: 'about-us',
               },
               {
-                label: 'Contact',
-                to: 'contact',
+                label: 'Company information',
+                to: 'company-information',
               },
+              // {
+              //   label: 'Contact',
+              //   to: 'contact',
+              // },
             ]
           },
           {
@@ -172,10 +176,10 @@ const config = {
                 label: 'About Us',
                 to: 'about-us',
               },
-              {
-                label: 'Contact',
-                to: 'contact',
-              },
+              // {
+              //   label: 'Contact',
+              //   to: 'contact',
+              // },
               {
                 label: 'Company information',
                 to: 'company-information',
