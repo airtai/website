@@ -57,11 +57,15 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/AIRT_logo_white.jpeg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+      },
       navbar: {
         title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/AIRT_icon_blue.svg',
+          src: 'img/logo-airt.svg',
         },
         items: [
           {
@@ -83,54 +87,36 @@ const config = {
               },
             ]
           },
-          {to: 'news', label: 'News', position: 'right'},
-          {
-            type: 'dropdown',
-            label: 'About',
-            position: 'right',
-            items: [
-              {
-                label: 'About Us',
-                to: 'about-us',
-              },
-              {
-                label: 'Company information',
-                to: 'company-information',
-              },
-              // {
-              //   label: 'Contact',
-              //   to: 'contact',
-              // },
-            ]
-          },
+          {to: 'news', label: 'News', position: 'right', className: "styled-item"},
+          {to: 'about-us', label: 'About Us', position: 'right', className: "styled-item"},
           {
             href: 'https://discord.gg/CJWmYpyFbc',
             position: 'right',
-            className: "header-discord-link",
+            className: "social-link extra-margin header-discord-link",
             "aria-label": "Discord Link",
           },
           {
             href: 'https://github.com/airtai',
             position: 'right',
-            className: "header-github-link",
+            className: "social-link header-github-link",
             "aria-label": "GitHub repository",
           },
           {
             href: 'https://twitter.com/airt_AI',
             position: 'right',
-            className: "header-twitter-link",
+            className: "social-link header-twitter-link",
             "aria-label": "Twitter Home Page",
           },
           {
             href: 'https://www.facebook.com/airt.ai.api',
             position: 'right',
-            className: "header-facebook-link",
+            className: "social-link header-facebook-link",
             "aria-label": "Facebook Home Page",
           },
           {
             href: 'https://www.linkedin.com/company/airt-ai',
             position: 'right',
-            className: "header-linkedin-link",
+            className: "social-link header-linkedin-link",
             "aria-label": "LinkedIn Home Page",
           },
         ],
