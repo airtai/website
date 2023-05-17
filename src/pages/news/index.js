@@ -1,6 +1,9 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import clsx from 'clsx';
+
+import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
 
 import styles from "./styles.module.css";
 
@@ -359,7 +362,7 @@ const NewsList = [
 const renderLinkButton = (link) => {
   if (link != "") {
     return (
-      <Link className="button button--secondary button--lg" to={link}>
+      <Link className={clsx("button button--secondary button--lg", styles.newsLinkBtn)} to={link}>
         Learn more
       </Link>
     );
@@ -401,13 +404,14 @@ function NewsItem({ index, header, description, link, imgSrc }) {
 export default function News() {
   return (
     <Layout title="News" description="news">
-      <section>
+      <section className={styles.newsSection}>
         <div className={`container ${styles.wrapper}`}>
           {NewsList.map((props, idx) => (
             <NewsItem key={idx} index={idx} {...props} />
           ))}
         </div>
       </section>
+      <RobotFooterIcon />
     </Layout>
   );
 }

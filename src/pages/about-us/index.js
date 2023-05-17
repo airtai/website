@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import AboutUsSection from '@site/src/components/AboutUsSection';
 import AboutUsFoundingMembers from '@site/src/components/AboutUsFoundingMembers';
+import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
 
 export default function AboutUs() {
   return (
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <div>
         <AboutUsFoundingMembers />
       </div>
+      <RobotFooterIcon />
     </Layout>
   );
 }

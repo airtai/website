@@ -12,13 +12,25 @@
 .styledHr {
   margin: 70px 0;
   height: 2px;
+  background-color: #82caea;
 }
 .wrapper {
   margin: 50px auto;
 }
 .img {
-  border: 1px solid;
+  border: 1px solid #214c6c;
 }
 .oddContainer {
   flex-direction: row-reverse;
 }
+.newsSection {
+  background-color: #61bfe5;
+  padding-bottom: 5rem;
+}
+.newsLinkBtn {
+  border-radius: 25px;
+  padding: 0.8rem 2.5rem 0.7rem;
+  font-size: 1rem;
+}
+
+/* 1px solid #214c6c */

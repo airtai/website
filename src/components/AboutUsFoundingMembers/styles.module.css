@@ -3,6 +3,13 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  background: rgb(92, 186, 224);
+  background: linear-gradient(
+    180deg,
+    rgba(92, 186, 224, 1) 0%,
+    rgba(97, 191, 229, 1) 25%
+  );
+  padding-bottom: 8rem;
 }
 
 .profilePic {
@@ -26,4 +33,5 @@
 .linkItems:before {
   width: 24px;
   height: 24px;
+  background-color: #003257;
 }

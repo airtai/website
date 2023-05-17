@@ -7,7 +7,7 @@ import Layout from '@theme/Layout';
 import { TypeAnimation } from 'react-type-animation';
 
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import HomepageStayTuned from '@site/src/components/HomepageStayTuned';
+import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
 
 import styles from './index.module.css';
 
@@ -61,7 +61,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
-      {/* <HomepageStayTuned /> */}
+      <RobotFooterIcon />
     </Layout>
   );
 }
