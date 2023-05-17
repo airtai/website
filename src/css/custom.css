@@ -97,6 +97,74 @@
   font-size: 0.8rem;
 }
 
+.footer.footer--dark {
+  background-color: #003257;
+  /* height: 18.75rem; */
+}
+.footer.footer--dark .container.container-fluid .footer__bottom {
+  position: absolute;
+  padding: 2rem;
+  width: 100%;
+  background-color: #003a60;
+  left: 0;
+}
+.footer.footer--dark .footer__copyright {
+  opacity: 0.5;
+  font-size: 0.85rem;
+  letter-spacing: 0.025rem;
+}
+.footer.footer--dark .footer__col {
+  margin: 2.3rem auto 5rem;
+  height: 10rem;
+  border-left: 2px solid rgb(33, 76, 108);
+  padding-left: 1.5rem;
+}
+.footer.footer--dark .footer__col .footer__title {
+  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+}
+.footer.footer--dark .footer__col:first-child .footer__item {
+  display: inline-block;
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+.footer.footer--dark .footer__col:first-child .footer__item:first-child {
+  padding-left: 0;
+}
+.footer.footer--dark .footer__col .footer__link-item {
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+.footer.footer--dark .footer__col .footer__link-item::after {
+  content: "";
+  display: flex;
+  height: 35px;
+  width: 42px;
+  background-color: #8c9fae;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgOTYgOTYwIDk2MCIgd2lkdGg9IjQ4Ij48cGF0aCBkPSJNNTQwIDc5M3EtOS05LTktMjEuNXQ4LTIwLjVsMTQ3LTE0N0gxOTBxLTEzIDAtMjEuNS04LjVUMTYwIDU3NHEwLTEzIDguNS0yMS41VDE5MCA1NDRoNDk2TDUzOCAzOTZxLTktOS04LjUtMjF0OS41LTIxcTktOCAyMS41LTh0MjAuNSA4bDE5OSAxOTlxNSA1IDcgMTB0MiAxMXEwIDYtMiAxMXQtNyAxMEw1ODIgNzkzcS05IDktMjEgOXQtMjEtOVoiLz48L3N2Zz4=);
+  mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgOTYgOTYwIDk2MCIgd2lkdGg9IjQ4Ij48cGF0aCBkPSJNNTQwIDc5M3EtOS05LTktMjEuNXQ4LTIwLjVsMTQ3LTE0N0gxOTBxLTEzIDAtMjEuNS04LjVUMTYwIDU3NHEwLTEzIDguNS0yMS41VDE5MCA1NDRoNDk2TDUzOCAzOTZxLTktOS04LjUtMjF0OS41LTIxcTktOCAyMS41LTh0MjAuNSA4bDE5OSAxOTlxNSA1IDcgMTB0MiAxMXEwIDYtMiAxMXQtNyAxMEw1ODIgNzkzcS05IDktMjEgOXQtMjEtOVoiLz48L3N2Zz4=);
+  display: inline-block;
+  transform: scale(0.4);
+  position: absolute;
+  margin-left: -0.5rem;
+  margin-top: -0.2rem;
+}
+.footer.footer--dark .footer__col:last-child .footer__link-item::after {
+  display: none;
+}
+.footer.footer--dark .footer__col .footer__link-item > svg {
+  display: none;
+}
+
+/* .footer.footer--dark .container.container-fluid {
+  margin: 0;
+  padding: 0;
+  max-width: 99%;
+}
+
+.footer.footer--dark .container.container-fluid .row.footer__links {
+  padding: 4rem;
+} */
+
 /** Desktop view */
 @media screen and (min-width: 1290px) {
   .navbar__logo {
@@ -150,9 +218,15 @@
   ul.menu__list li {
     margin-bottom: 10px;
   }
+  .footer.footer--dark .footer__col {
+    margin: 1rem auto 1rem;
+    height: auto;
+    border: none;
+  }
 }
 
-.header-discord-link:before {
+.header-discord-link:before,
+.footer-discord-link:before {
   content: "";
   display: flex;
   height: 24px;
@@ -162,15 +236,13 @@
   mask-image: url("/img/icon-discord.svg");
 }
 
-.header-discord-link:hover {
+.header-discord-link:hover,
+.footer-discord-link:hover {
   opacity: 0.6;
 }
 
-.header-github-link:hover {
-  opacity: 0.6;
-}
-
-.header-github-link:before {
+.header-github-link:before,
+.footer-github-link:before {
   content: "";
   display: flex;
   height: 24px;
@@ -180,11 +252,18 @@
   mask-image: url("/img/icon-github.svg");
 }
 
-.header-facebook-link:hover {
+.header-github-link:hover,
+.footer-github-link:hover {
   opacity: 0.6;
 }
 
-.header-facebook-link:before {
+.header-facebook-link:hover,
+.footer-facebook-link:hover {
+  opacity: 0.6;
+}
+
+.header-facebook-link:before,
+.footer-facebook-link:before {
   content: "";
   display: flex;
   height: 24px;
@@ -194,11 +273,13 @@
   mask-image: url("/img/icon-facebook.svg");
 }
 
-.header-twitter-link:hover {
+.header-twitter-link:hover,
+.footer-twitter-link:hover {
   opacity: 0.6;
 }
 
-.header-twitter-link:before {
+.header-twitter-link:before,
+.footer-twitter-link:before {
   content: "";
   display: flex;
   height: 24px;
@@ -208,11 +289,13 @@
   mask-image: url("/img/icon-twitter.svg");
 }
 
-.header-linkedin-link:hover {
+.header-linkedin-link:hover,
+.footer-linkedin-link:hover {
   opacity: 0.6;
 }
 
-.header-linkedin-link:before {
+.header-linkedin-link:before,
+.footer-linkedin-link:before {
   content: "";
   display: flex;
   height: 24px;

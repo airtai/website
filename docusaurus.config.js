@@ -134,33 +134,59 @@ const config = {
           //   ],
           // },
           {
-            title: 'Community',
+            title: 'COMMUNITY',
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.gg/CJWmYpyFbc',
+                html: `
+                    <a class="footer-discord-link" href="https://discord.gg/CJWmYpyFbc" target="_blank" rel="noreferrer noopener" aria-label="Discord link"></a>
+                  `,
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/airtai',
+                html: `
+                    <a class="footer-github-link" href="https://github.com/airtai" target="_blank" rel="noreferrer noopener" aria-label="Github link"></a>
+                  `,
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/airt_AI',
+                html: `
+                    <a class="footer-twitter-link" href="https://twitter.com/airt_AI" target="_blank" rel="noreferrer noopener" aria-label="Twitter link"></a>
+                  `,
               },
               {
-                label: 'Facebook',
-                href: 'https://www.facebook.com/airt.ai.api/',
+                html: `
+                    <a class="footer-facebook-link" href="https://www.facebook.com/airt.ai.api/" target="_blank" rel="noreferrer noopener" aria-label="Facebook link"></a>
+                  `,
               },
               {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/company/airt-ai/',
+                html: `
+                    <a class="footer-linkedin-link" href="https://www.linkedin.com/company/airt-ai/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn link"></a>
+                  `,
               },
             ],
           },
           {
-            title: 'More',
+            title: 'EXPLORE TOOLS',
             items: [
+              {
+                label: 'FastKafka',
+                href: 'https://fastkafka.airt.ai',
+              },
+              {
+                label: 'Material for nbdev',
+                href: 'https://nbdev-mkdocs.airt.ai',
+              },
+              {
+                label: 'Docstring-gen',
+                href: 'https://docstring-gen.airt.ai',
+              },
+            ],
+          },
+          {
+            title: 'EXPLORE MORE',
+            items: [
+              {
+                label: 'News',
+                to: 'news',
+              },
               {
                 label: 'About Us',
                 to: 'about-us',
@@ -169,14 +195,11 @@ const config = {
               //   label: 'Contact',
               //   to: 'contact',
               // },
-              {
-                label: 'Company information',
-                to: 'company-information',
-              },
+              
             ],
           },
         ],
-        copyright: `© 2023 airt`,
+        copyright: `© 2023 airt. All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
