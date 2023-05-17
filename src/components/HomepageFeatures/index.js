@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'DEV TOOL FOR DATA IN MOTION',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
         Efficient and scalable framework that allows developers to create, test, and 
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'BLEEDING EDGE TECHNOLOGY',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         Incorporated GPT-based model that predicts future events to be streamed, and outperforms 
@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'DRIVING IMPACT WITH DEEP LEARNING',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         Our model can be used for both standard business predictive analytics and automatic 

@@ -63,38 +63,24 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.navbar__logo {
-  height: 2.6rem;
-}
-
-.navbar__brand {
-  margin-left: 9.6rem;
-}
-/** In mobile view, reduce the margin */
-@media screen and (max-width: 996px) {
-  .navbar__brand {
-    margin-left: 1rem;
-  }
-}
-
-.navbar__link {
-  font-size: 1.1rem;
-}
-.dropdown > .navbar__link:after {
-  margin-left: 0.5em;
-  top: 1px;
-  font-size: 0.8rem;
-}
-
+/* default settings for both tablet and desktop */
 .navbar--fixed-top {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-
-.navbar.navbar--fixed-top .navbar__items--right {
-  flex: 1;
-  justify-content: center;
+.navbar__items.navbar__items--right
+  .navbar__item.navbar__link.social-link.extra-margin {
   margin-left: 100px;
+}
+
+.navbar__items.navbar__items--right .navbar__item.navbar__link.social-link {
+  padding: 0;
+  margin-left: 10px;
+}
+.navbar__items.navbar__items--right
+  .navbar__item.dropdown
+  .dropdown__link:hover {
+  color: var(--ifm-link-hover-color);
 }
 
 .navbar__items.navbar__items--right .navbar__item.dropdown,
@@ -105,20 +91,66 @@
 .navbar__items.navbar__items--right .navbar__item.dropdown {
   border-left: 1px solid #214c6c;
 }
-
-.navbar__items.navbar__items--right
-  .navbar__item.dropdown
-  .dropdown__link:hover {
-  color: var(--ifm-link-hover-color);
+.dropdown > .navbar__link:after {
+  margin-left: 0.5em;
+  top: 1px;
+  font-size: 0.8rem;
 }
 
-.navbar__items.navbar__items--right
-  .navbar__item.navbar__link.social-link.extra-margin {
-  margin-left: 100px;
+/** Desktop view */
+@media screen and (min-width: 1290px) {
+  .navbar__logo {
+    height: 2.6rem;
+  }
+
+  .navbar__brand {
+    margin-left: 9.6rem;
+  }
+
+  .navbar__link {
+    font-size: 1.1rem;
+  }
+
+  .navbar.navbar--fixed-top .navbar__items--right {
+    flex: 1;
+    justify-content: center;
+    margin-left: 100px;
+  }
 }
-.navbar__items.navbar__items--right .navbar__item.navbar__link.social-link {
-  padding: 0;
-  margin-left: 10px;
+
+.hero--primary {
+  background: rgb(8, 110, 159);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 110, 159, 1) 0%,
+    rgba(50, 141, 186, 1) 35%,
+    rgba(89, 182, 223, 1) 100%
+  );
+}
+
+/** Tablet view */
+@media screen and (max-width: 1290px) {
+  .navbar__items.navbar__items--right
+    .navbar__item.navbar__link.social-link.extra-margin {
+    margin-left: 30px;
+  }
+  .navbar__items.navbar__items--right .navbar__item.dropdown,
+  .navbar__items.navbar__items--right .navbar__item.navbar__link.styled-item {
+    padding: 21px 20px;
+  }
+}
+
+/** Mobile view */
+@media screen and (max-width: 996px) {
+  .navbar__brand {
+    margin-left: 1rem;
+  }
+  .menu__link.social-link {
+    display: inline-block;
+  }
+  ul.menu__list li {
+    margin-bottom: 10px;
+  }
 }
 
 .header-discord-link:before {
