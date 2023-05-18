@@ -23,7 +23,7 @@
   text-align: center;
 }
 .featureHeader {
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.025rem;
   font-size: 1.5rem;
 }
 .featureContainer {
@@ -31,4 +31,9 @@
 }
 .featureDescription {
   font-size: 0.9rem;
+}
+@media screen and (max-width: 996px) {
+  .featureContainer {
+    padding: 0 3rem 5rem;
+  }
 }
