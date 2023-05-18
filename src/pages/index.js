@@ -34,7 +34,7 @@ function HomepageHeader() {
               speed={{type: 'keyStrokeDelayInMs', value: 100}}
             />
           &nbsp;in motion</h1>
-          <img className={styles.robotHero} src="/img/robot-hero.svg" alt="robot-hero" />
+          <img className={styles.robotHero} src="img/robot-hero.svg" alt="robot-hero" />
         </div>
         <p className={styles.heroDescriptionText}><em>airt</em> is an AI-powered framework for streaming app development</p>
         <div className={styles.buttons}>

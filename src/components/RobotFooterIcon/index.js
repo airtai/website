@@ -7,7 +7,7 @@ export default function RobotFooterIcon() {
   return (
     <section>
       <div className={clsx("container", styles.robotFooterContainer)}>
-       <img className={styles.robotFooterIcon} src="/img/robot-footer.svg" />
+       <img className={styles.robotFooterIcon} src="img/robot-footer.svg" />
       </div>
     </section>
   );

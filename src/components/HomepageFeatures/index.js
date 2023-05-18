@@ -6,7 +6,7 @@ const FeatureList = [
   {
     title: 'DEV TOOL FOR DATA IN MOTION',
     // Svg: require('@site/static/img/dev-tool-for-data-in-motion.svg').default,
-    src: '/img/dev-tool-for-data-in-motion.svg',
+    src: 'img/dev-tool-for-data-in-motion.svg',
     description: (
       <>
         Efficient and scalable framework that allows developers to create, test, and 
@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: 'BLEEDING EDGE TECHNOLOGY',
     // Svg: require('@site/static/img/bleeding-edge-technology.svg').default,
-    src: '/img/bleeding-edge-technology.svg',
+    src: 'img/bleeding-edge-technology.svg',
     description: (
       <>
         Incorporated GPT-based model that predicts future events to be streamed, and outperforms 
@@ -28,7 +28,7 @@ const FeatureList = [
   {
     title: 'DRIVING IMPACT WITH DEEP LEARNING',
     // Svg: require('@site/static/img/driving-impact-with-deep-learning.svg').default,
-    src: '/img/driving-impact-with-deep-learning.svg',
+    src: 'img/driving-impact-with-deep-learning.svg',
     description: (
       <>
         Our model can be used for both standard business predictive analytics and automatic 
