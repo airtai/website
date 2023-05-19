@@ -5,7 +5,8 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'DEV TOOL FOR DATA IN MOTION',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    // Svg: require('@site/static/img/dev-tool-for-data-in-motion.svg').default,
+    src: 'img/dev-tool-for-data-in-motion.svg',
     description: (
       <>
         Efficient and scalable framework that allows developers to create, test, and 
@@ -15,7 +16,8 @@ const FeatureList = [
   },
   {
     title: 'BLEEDING EDGE TECHNOLOGY',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    // Svg: require('@site/static/img/bleeding-edge-technology.svg').default,
+    src: 'img/bleeding-edge-technology.svg',
     description: (
       <>
         Incorporated GPT-based model that predicts future events to be streamed, and outperforms 
@@ -25,7 +27,8 @@ const FeatureList = [
   },
   {
     title: 'DRIVING IMPACT WITH DEEP LEARNING',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    // Svg: require('@site/static/img/driving-impact-with-deep-learning.svg').default,
+    src: 'img/driving-impact-with-deep-learning.svg',
     description: (
       <>
         Our model can be used for both standard business predictive analytics and automatic 
@@ -35,15 +38,16 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({src, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      {/* <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div> */}
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className="text--center">
+        <img className={styles.featureSvg} src={src} />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
+      </div>
+      <div className={styles.featureContainer}>
+        <h3 className={styles.featureHeader}>{title}</h3>
+        <p className={styles.featureDescription}>{description}</p>
       </div>
     </div>
   );

@@ -10,29 +10,135 @@
   overflow: hidden;
 }
 .heroText {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
 }
 .heroTextAnimate {
   font-size: 4rem;
+  letter-spacing: 0.1rem;
 }
 .heroDescriptionText {
   text-align: center;
-  font-size: 1.5rem;
-  opacity: 0.9;
+  font-size: 1.4rem;
 }
 .heroNotes {
-  margin-top: 1em;
+  margin-top: 1.3em;
+  opacity: 0.7;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.robotHeroContainer {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.robotHeroContainerHeader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+  top: 6rem;
+  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+}
+.robotHero {
+  width: 520px;
+  height: auto;
+}
+
+.heroButton {
+  color: #fff;
+  background: var(--ifm-navbar-background-color);
+  border-radius: 25px;
+  padding: 0.8rem 2.5rem 0.7rem 2.5rem;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/** Tablet view */
+@media screen and (max-width: 1290px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  .heroText {
+    font-size: 2rem;
+  }
+  .heroTextAnimate {
+    font-size: 3rem;
+  }
+  .heroDescriptionText {
+    font-size: 1.3rem;
+  }
+  .heroNotes {
+    font-size: 1.2em;
+    margin-top: 1em;
+  }
+  .robotHero {
+    width: 400px;
+  }
+  .robotHeroContainerHeader {
+    width: 500px;
+    font-size: 2rem;
+    top: 4.75rem;
+  }
+  .heroButton {
+    font-size: 1.2rem;
+  }
+}
+
+/** Mobile view */
+@media screen and (max-width: 996px) {
+  .heroText {
+    font-size: 1.3rem;
+  }
+  .heroTextAnimate {
+    font-size: 1.7rem;
+  }
+  .heroDescriptionText {
+    font-size: 1rem;
+  }
+  .robotHeroContainerHeader {
+    width: 300px;
+    font-size: 1.3rem;
+    top: 3.75rem;
+  }
+  .robotHero {
+    width: 300px;
+  }
+  .heroButton {
+    font-size: 1rem;
+  }
+  .heroNotes {
+    font-size: 0.9rem;
+  }
+}
+
+/** Mobile view (Galaxy fold)*/
+@media screen and (max-width: 280px) {
+  .heroText {
+    font-size: 1.1rem;
+  }
+  .heroTextAnimate {
+    font-size: 1.2rem;
+  }
+  .robotHeroContainerHeader {
+    width: 100%;
+    font-size: 1rem;
+    top: 2.75rem;
+  }
+  .robotHero {
+    width: 280px;
+  }
+  .heroButton {
+    font-size: 0.9rem;
+  }
+  .heroNotes {
+    font-size: 0.8rem;
+  }
 }

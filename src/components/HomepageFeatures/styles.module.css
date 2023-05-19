@@ -1,13 +1,18 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
   width: 100%;
+  background: rgb(92, 186, 224);
+  background: linear-gradient(
+    180deg,
+    rgba(92, 186, 224, 1) 0%,
+    rgba(97, 191, 229, 1) 25%
+  );
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  width: 300px;
+  height: 300px;
 }
 .title {
   font-size: 2.3rem;
@@ -16,4 +21,19 @@
 .description {
   font-size: 1.5rem;
   text-align: center;
+}
+.featureHeader {
+  letter-spacing: 0.025rem;
+  font-size: 1.5rem;
+}
+.featureContainer {
+  padding: 1.5rem 3rem 8rem 3rem;
+}
+.featureDescription {
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 996px) {
+  .featureContainer {
+    padding: 0 3rem 5rem;
+  }
 }

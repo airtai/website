@@ -1,12 +1,15 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import clsx from 'clsx';
+
+import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
 
 import styles from './styles.module.css';
 
 export default function Hello() {
   return (
     <Layout title="Company information" description="Company information">
-      <section className="hero hero--primary">
+      <section className={clsx("hero hero--primary", styles.sectionContainer)}>
       <div className="container">
         <div className="row">
           <div className="col col--12">
@@ -27,6 +30,7 @@ export default function Hello() {
         </div>
       </div>
     </section>
+    <RobotFooterIcon />
     </Layout>
   );
 }

@@ -12,6 +12,7 @@ export default function HomepageFeatures() {
             <div className="text--left padding-horiz--md">
               <h2 className={styles.header}>Pointing out the</h2>
               <h2 className={styles.header}>future.</h2>
+              <h2 className={styles.headerMobile}>Pointing out the future.</h2>
             </div>
           </div>
           <div className={clsx('col col--6')}>
