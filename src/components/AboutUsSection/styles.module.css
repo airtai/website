@@ -9,9 +9,20 @@
   font-size: 4rem;
   line-height: 1em;
 }
-/* .description {
-  font-size: 1.2rem;
-} */
+.headerMobile {
+  display: none;
+}
 .notes {
   margin-top: 1em;
+}
+/** Mobile view */
+@media screen and (max-width: 996px) {
+  .header {
+    display: none;
+  }
+  .headerMobile {
+    display: block;
+    font-size: 3rem;
+    line-height: 1em;
+  }
 }

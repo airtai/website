@@ -4,6 +4,9 @@
   padding: 2rem 0;
   width: 100%;
 }
+.sectionContainer {
+  min-height: 800px;
+}
 
 .header {
   font-size: 4rem;
@@ -16,6 +19,31 @@
 .reducedLineHeight {
   line-height: 0.6em;
   font-size: 1rem;
+}
+
+.sectionContainer {
+  min-height: 750px;
+}
+
+/** 4K Desktop view */
+@media screen and (min-width: 1900px) {
+  .sectionContainer {
+    min-height: 1150px;
+  }
+}
+
+/** Tablet view */
+@media screen and (max-width: 1290px) {
+  .sectionContainer {
+    min-height: 600px;
+  }
+}
+
+/** Mobile view */
+@media screen and (max-width: 996px) {
+  .header {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {

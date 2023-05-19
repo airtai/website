@@ -64,6 +64,55 @@
 }
 
 /* default settings for both tablet and desktop */
+.navbar.navbar--fixed-top .navbar__items > a.header-discord-link + div > button,
+.navbar-sidebar .navbar-sidebar__brand div > button {
+  color: #fff;
+}
+.navbar.navbar--fixed-top
+  .navbar__items
+  > a.header-discord-link
+  + div
+  > button:hover,
+.navbar-sidebar .navbar-sidebar__brand div > button:hover {
+  background: #8c9fae;
+}
+
+[data-theme="dark"]
+  .navbar.navbar--fixed-top
+  .navbar__items
+  > a.header-discord-link
+  + div
+  > button:hover,
+.navbar-sidebar .navbar-sidebar__brand div > button:hover {
+  background: #444950;
+}
+
+.navbar-sidebar .navbar-sidebar__items .navbar-sidebar__item > button,
+.navbar-sidebar .navbar-sidebar__items .navbar-sidebar__item > ul > li a {
+  color: #fff;
+}
+
+.menu__list-item--collapsed .menu__link--sublist-caret:after {
+  background: url("/static/img/icon-arrow-right-blue.svg") 50% / 2rem 2rem;
+  min-width: 1rem;
+  width: 1rem;
+  height: 1rem;
+  transform: rotateZ(0deg);
+  filter: none;
+}
+.menu__link--sublist-caret:after {
+  background: url("/static/img/icon-arrow-right-blue.svg") 50% / 2rem 2rem;
+  transform: rotate(90deg);
+  min-width: 1rem;
+  width: 1rem;
+  height: 1rem;
+  filter: none;
+}
+.navbar-sidebar__back,
+.menu__link--active:not(.menu__link--sublist) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .navbar--fixed-top {
   padding-top: 0px;
   padding-bottom: 0px;

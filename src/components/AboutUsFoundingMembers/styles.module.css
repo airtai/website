@@ -35,3 +35,10 @@
   height: 24px;
   background-color: #003257;
 }
+
+/** 4K Desktop view */
+@media screen and (min-width: 1900px) {
+  .features {
+    min-height: 800px;
+  }
+}
