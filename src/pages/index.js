@@ -40,7 +40,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--lg", styles.heroButton)}
-            to="https://fastkafka.airt.ai">
+            to="https://docs.airt.ai">
               GET STARTED
           </Link>
         </div>
