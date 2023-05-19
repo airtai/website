@@ -56,7 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/AIRT_logo_white.jpeg',
+      image: 'img/airt-social-card.png',
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
