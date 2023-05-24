@@ -54,9 +54,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.tagline}`}
-      // title={`AI in motion`}
-      description="airt website">
+      title={siteConfig.tagline}
+      description={siteConfig.customFields.description}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
