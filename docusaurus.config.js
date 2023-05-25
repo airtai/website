@@ -8,6 +8,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'airt',
   tagline: 'AI in motion',
+  customFields: {
+    description:
+      'Efficient and scalable solution for building AI-powered microservices for streaming data.',
+  },
   favicon: 'img/AIRT_icon_blue.svg',
 
   // Set the production url of your site here
