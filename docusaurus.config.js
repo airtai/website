@@ -195,7 +195,10 @@ const config = {
                 label: 'Company information',
                 to: 'company-information',
               },
-              
+              {
+                label: 'Contact Us',
+                to: 'contact-us',
+              },
             ],
           },
         ],

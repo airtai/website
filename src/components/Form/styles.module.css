@@ -1,11 +1,29 @@
-.form{
-  text-align: center;
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 4rem;
 }
-.formInput {
-  padding: calc( var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier) ) calc( var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier) );
+
+.form label {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: left; /* Align labels to the left */
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  padding: calc(
+      var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier)
+    )
+    calc(
+      var(--ifm-button-padding-horizontal) * var(--ifm-button-size-multiplier)
+    );
   display: inline-block;
   font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
-  font-weight: var(--ifm-button-font-weight);
+  /* font-weight: var(--ifm-button-font-weight); */
   line-height: 1.5;
   border: var(--ifm-button-border-width) solid var(--ifm-button-border-color);
   border-radius: var(--ifm-button-border-radius);
@@ -14,11 +32,103 @@
   white-space: nowrap;
   height: 47px;
   margin-right: 20px;
-  width: 20rem;
+  width: 30rem;
+}
+.form textarea {
+  height: 150px;
 }
 
+.form button {
+  color: #fff;
+  background: var(--ifm-navbar-background-color);
+  border-radius: 25px;
+  padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+  margin-top: 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 30rem;
+}
+
+.form button:hover {
+  background-color: #0a6fa0;
+}
+
+.errorMsgContainer {
+  background: #c12e2e;
+  margin-top: 3px;
+}
+
+.errorMsg {
+  color: #fff;
+  padding: 0.15rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.successMessage,
+.errorMessage {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.form.hidden {
+  visibility: hidden;
+}
+
+/* CSS Styles for Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loaderContent {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loaderContent .spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.formSubmitSuccessMsg,
+.formSubmitErrorMsg {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/** Mobile view */
 @media screen and (max-width: 996px) {
-  .formInput {
-    margin: 20px;
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+  }
+  .form button {
+    width: 100%;
   }
 }

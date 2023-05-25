@@ -26,7 +26,7 @@
 }
 
 /** 4K Desktop view */
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 2000px) {
   .sectionContainer {
     min-height: 1150px;
   }
