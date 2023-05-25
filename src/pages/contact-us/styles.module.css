@@ -1,0 +1,32 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.header {
+  font-size: 4rem;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.containerWithMinHeight {
+  min-height: 750px;
+}
+
+/** 4K Desktop view */
+@media screen and (min-width: 2000px) {
+  .containerWithMinHeight {
+    min-height: 1250px;
+  }
+}
+
+/** Tablet view */
+@media screen and (max-width: 1290px) {
+  .containerWithMinHeight {
+    min-height: 600px;
+  }
+}
