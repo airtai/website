@@ -82,6 +82,10 @@ const config = {
                 href: 'https://fastkafka.airt.ai',
               },
               {
+                label: 'Monotonic Neural Networks',
+                href: 'https://monotonic.airt.ai',
+              },
+              {
                 label: 'Material for nbdev',
                 href: 'https://nbdev-mkdocs.airt.ai',
               },
@@ -173,6 +177,10 @@ const config = {
               {
                 label: 'FastKafka',
                 href: 'https://fastkafka.airt.ai',
+              },
+              {
+                label: 'Monotonic Neural Networks',
+                href: 'https://monotonic.airt.ai',
               },
               {
                 label: 'Material for nbdev',
