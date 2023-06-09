@@ -74,7 +74,7 @@ const config = {
         items: [
           {
             type: 'dropdown',
-            label: 'Product',
+            label: 'Products',
             position: 'right',
             items: [
               {
@@ -183,7 +183,7 @@ const config = {
             ],
           },
           {
-            title: 'EXPLORE PRODUCT',
+            title: 'EXPLORE PRODUCTS',
             items: [
               {
                 label: 'EventGPT',
