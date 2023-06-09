@@ -74,13 +74,24 @@ const config = {
         items: [
           {
             type: 'dropdown',
-            label: 'Tools',
+            label: 'Product',
             position: 'right',
             items: [
               {
+                label: 'EventGPT',
+                href: 'https://docs.airt.ai',
+              },
+              {
                 label: 'FastKafka',
                 href: 'https://fastkafka.airt.ai',
-              },
+              }
+            ]
+          },
+          {
+            type: 'dropdown',
+            label: 'Tools',
+            position: 'right',
+            items: [
               {
                 label: 'Monotonic Neural Networks',
                 href: 'https://monotonic.airt.ai',
@@ -172,12 +183,21 @@ const config = {
             ],
           },
           {
-            title: 'EXPLORE TOOLS',
+            title: 'EXPLORE PRODUCT',
             items: [
+              {
+                label: 'EventGPT',
+                href: 'https://docs.airt.ai',
+              },
               {
                 label: 'FastKafka',
                 href: 'https://fastkafka.airt.ai',
-              },
+              }
+            ],
+          },
+          {
+            title: 'EXPLORE TOOLS',
+            items: [
               {
                 label: 'Monotonic Neural Networks',
                 href: 'https://monotonic.airt.ai',
