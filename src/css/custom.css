@@ -137,7 +137,8 @@
   border-right: 1px solid #214c6c;
   padding: 23px 20px;
 }
-.navbar__items.navbar__items--right .navbar__item.dropdown {
+
+.navbar__items.navbar__items--right .navbar__item.dropdown:first-child {
   border-left: 1px solid #214c6c;
 }
 .dropdown > .navbar__link:after {
@@ -227,7 +228,9 @@
   .navbar__link {
     font-size: 1.1rem;
   }
+}
 
+@media screen and (min-width: 1600px) {
   .navbar.navbar--fixed-top .navbar__items--right {
     flex: 1;
     justify-content: center;
@@ -252,7 +255,7 @@
   }
   .navbar__items.navbar__items--right .navbar__item.dropdown,
   .navbar__items.navbar__items--right .navbar__item.navbar__link.styled-item {
-    padding: 21px 20px;
+    padding: 24px 20px;
   }
 }
 
