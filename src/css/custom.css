@@ -119,12 +119,17 @@
 }
 .navbar__items.navbar__items--right
   .navbar__item.navbar__link.social-link.extra-margin {
-  margin-left: 100px;
+  margin-left: 15px;
+}
+.navbar__items.navbar__items--right
+  .navbar__item.navbar__link.social-link
+  + div[class^="searchBox_"] {
+  padding-left: 0px;
 }
 
 .navbar__items.navbar__items--right .navbar__item.navbar__link.social-link {
   padding: 0;
-  margin-left: 10px;
+  margin-left: 14px;
 }
 .navbar__items.navbar__items--right
   .navbar__item.dropdown
@@ -215,26 +220,34 @@
   padding: 4rem;
 } */
 
-/** Desktop view */
-@media screen and (min-width: 1290px) {
-  .navbar__logo {
-    height: 2.6rem;
-  }
-
-  .navbar__brand {
-    margin-left: 9.6rem;
-  }
-
-  .navbar__link {
-    font-size: 1.1rem;
-  }
+.navbar__logo {
+  width: 2.156rem;
+  height: auto;
+  margin-top: 1.2rem;
 }
 
-@media screen and (min-width: 1600px) {
-  .navbar.navbar--fixed-top .navbar__items--right {
-    flex: 1;
-    justify-content: center;
-    margin-left: 100px;
+.navbar__brand {
+  margin-left: 0;
+}
+
+.navbar__brand:hover {
+  color: var(--ifm-navbar-link-color);
+}
+.navbar__title {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  margin-top: 0.2rem;
+  margin-left: 2.3rem;
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 100;
+  line-height: var(--ifm-heading-line-height);
+}
+
+/** Desktop view */
+@media screen and (min-width: 1290px) {
+  .navbar__link {
+    font-size: 1.1rem;
   }
 }
 
@@ -249,21 +262,34 @@
 
 /** Tablet view */
 @media screen and (max-width: 1290px) {
-  .navbar__items.navbar__items--right
-    .navbar__item.navbar__link.social-link.extra-margin {
-    margin-left: 30px;
-  }
   .navbar__items.navbar__items--right .navbar__item.dropdown,
   .navbar__items.navbar__items--right .navbar__item.navbar__link.styled-item {
     padding: 24px 20px;
   }
 }
 
-/** Mobile view */
-@media screen and (max-width: 996px) {
-  .navbar__brand {
-    margin-left: 1rem;
+/** Laptop view */
+@media screen and (max-width: 1024px) {
+  .navbar__toggle {
+    margin-top: 0.4rem;
   }
+  .navbar__brand {
+    margin-left: 0;
+    margin-top: 0.4rem;
+  }
+  .navbar__logo {
+    margin-top: 0.5rem;
+    width: 1.7rem;
+  }
+  .navbar__title {
+    font-size: 2.8rem;
+    margin-left: 1.8rem;
+    margin-top: -0.3rem;
+  }
+}
+
+/** Tablet view */
+@media screen and (max-width: 996px) {
   .menu__link.social-link {
     display: inline-block;
   }
