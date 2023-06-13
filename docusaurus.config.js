@@ -68,7 +68,7 @@ const config = {
       navbar: {
         title: 'airt',
         logo: {
-          alt: 'Airt Logo',
+          alt: 'airt logo',
           src: 'img/AIRT_icon_blue.svg',
         },
         items: [
