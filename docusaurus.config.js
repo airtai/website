@@ -66,10 +66,10 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        title: '',
+        title: 'airt',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo-airt.svg',
+          alt: 'airt logo',
+          src: 'img/AIRT_icon_blue.svg',
         },
         items: [
           {
