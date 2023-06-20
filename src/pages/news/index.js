@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import clsx from 'clsx';
@@ -359,16 +359,6 @@ const NewsList = [
   },
 ];
 
-const renderLinkButton = (link) => {
-  if (link != "") {
-    return (
-      <Link className={clsx("button button--lg", styles.newsLinkBtn)} to={link}>
-        READ MORE
-      </Link>
-    );
-  }
-};
-
 function NewsItem({ index, header, description, link, imgSrc }) {
   return (
     <div className={`col col--4 ${styles.item}`}>
@@ -393,29 +383,43 @@ function NewsItem({ index, header, description, link, imgSrc }) {
         <a 
         className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
         href={link}
-        target="_blank">Read More</a>
+        target="_blank">READ MORE</a>
     </div>
   );
 }
 
 const chunkSize = 3;
-const chunkedNewsList = Array(Math.ceil(NewsList.length / chunkSize))
+const chunkedArticlesList = Array(Math.ceil(NewsList.length / chunkSize))
   .fill()
   .map((_, index) => NewsList.slice(index * chunkSize, (index + 1) * chunkSize));
 
 export default function News() {
+  const [articleContainersToShow, setArticleContainersToShow] = useState(3);
+  const articles = chunkedArticlesList.slice(0, articleContainersToShow)
+
+  const handleLoadMore = () => {
+    setArticleContainersToShow(articleContainersToShow + 3);
+  };
+
   return (
     <Layout title="News" description="news">
       <section className={styles.newsSection}>
         <div className={`container ${styles.wrapper}`}>
           <h3 className={styles.pageHeader}>News</h3>
-            {chunkedNewsList.map((chunk, idx) => (
+            {articles.map((chunk, idx) => (
               <div key={idx} className="row">
                 {chunk.map((item, itemIndex) => (
                   <NewsItem key={itemIndex} index={itemIndex} {...item} />
                 ))}
               </div>
             ))}
+            {articleContainersToShow < chunkedArticlesList.length && (
+              <div className={styles.loadMoreButtonWrapper}>
+                <button className={clsx("button button--lg", styles.loadMore)} onClick={handleLoadMore}>
+                    LOAD MORE
+                </button>
+              </div>
+            )}
         </div>
       </section>
       <RobotFooterIcon />
