@@ -362,53 +362,51 @@ const NewsList = [
 const renderLinkButton = (link) => {
   if (link != "") {
     return (
-      <Link className={clsx("button button--secondary button--lg", styles.newsLinkBtn)} to={link}>
-        Learn more
+      <Link className={clsx("button button--lg", styles.newsLinkBtn)} to={link}>
+        READ MORE
       </Link>
-    );
-  }
-};
-
-const renderLinkHrTag = (index) => {
-  if (index != 0) {
-    return (
-      <hr className={styles.styledHr} />
     );
   }
 };
 
 function NewsItem({ index, header, description, link, imgSrc }) {
   return (
-    <div>
-      {renderLinkHrTag(index)}
-      <div
-        className={
-          index % 2 === 0
-            ? `row ${styles.evenContainer}`
-            : `row ${styles.oddContainer}`
-        }
-      >
-        <div className="col col--6">
+    <div className={`col col--4 ${styles.item}`}>
+        <div className={styles.imgContainer}>
           <img className={styles.img} src={imgSrc} />
         </div>
-        <div className="col col--6">
+        <div>
+        <div className={styles.linkHeading}>
           <h2 className={styles.header}>{header}</h2>
-          <p>{description}</p>
+        </div>
+          <div className={styles.linkDescriptionContainer}>
+            <p className={styles.linkDescriptionText}>{description}</p>
+          </div>
           {renderLinkButton(link)}
         </div>
-      </div>
     </div>
   );
 }
+
+const chunkSize = 3;
+const chunkedNewsList = Array(Math.ceil(NewsList.length / chunkSize))
+  .fill()
+  .map((_, index) => NewsList.slice(index * chunkSize, (index + 1) * chunkSize));
+
 
 export default function News() {
   return (
     <Layout title="News" description="news">
       <section className={styles.newsSection}>
         <div className={`container ${styles.wrapper}`}>
-          {NewsList.map((props, idx) => (
-            <NewsItem key={idx} index={idx} {...props} />
-          ))}
+          <h3 className={styles.pageHeader}>News</h3>
+            {chunkedNewsList.map((chunk, idx) => (
+              <div key={idx} className="row">
+                {chunk.map((item, itemIndex) => (
+                  <NewsItem key={itemIndex} index={itemIndex} {...item} />
+                ))}
+              </div>
+            ))}
         </div>
       </section>
       <RobotFooterIcon />

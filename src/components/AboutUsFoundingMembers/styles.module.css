@@ -18,8 +18,9 @@
 }
 
 .header {
-  font-size: 60px;
+  font-size: 3rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .linkContainer {
