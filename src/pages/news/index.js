@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import clsx from 'clsx';
@@ -359,56 +359,69 @@ const NewsList = [
   },
 ];
 
-const renderLinkButton = (link) => {
-  if (link != "") {
-    return (
-      <Link className={clsx("button button--secondary button--lg", styles.newsLinkBtn)} to={link}>
-        Learn more
-      </Link>
-    );
-  }
-};
-
-const renderLinkHrTag = (index) => {
-  if (index != 0) {
-    return (
-      <hr className={styles.styledHr} />
-    );
-  }
-};
-
 function NewsItem({ index, header, description, link, imgSrc }) {
   return (
-    <div>
-      {renderLinkHrTag(index)}
-      <div
+    <div className={`col col--4 ${styles.item}`}>
+      <a 
         className={
-          index % 2 === 0
-            ? `row ${styles.evenContainer}`
-            : `row ${styles.oddContainer}`
+          link != ""
+            ? `${styles.articleLinkWrapper} ${styles.articleActiveLink}`
+            : `${styles.articleLinkWrapper} ${styles.articleDisabledLink}`
         }
-      >
-        <div className="col col--6">
+        href={link}
+        target="_blank">
+        <span className={styles.imgContainer}>
           <img className={styles.img} src={imgSrc} />
-        </div>
-        <div className="col col--6">
-          <h2 className={styles.header}>{header}</h2>
-          <p>{description}</p>
-          {renderLinkButton(link)}
-        </div>
-      </div>
+        </span>
+          <span className={styles.linkHeading}>
+            <h2 className={styles.header}>{header}</h2>
+          </span>
+          <span className={styles.linkDescriptionContainer}>
+            <p className={styles.linkDescriptionText}>{description}</p>
+          </span>
+        </a>
+        {link != "" && <a 
+            className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
+            href={link}
+            target="_blank">READ MORE
+          </a>
+      }
     </div>
   );
 }
 
+const chunkSize = 3;
+const chunkedArticlesList = Array(Math.ceil(NewsList.length / chunkSize))
+  .fill()
+  .map((_, index) => NewsList.slice(index * chunkSize, (index + 1) * chunkSize));
+
 export default function News() {
+  const [articleContainersToShow, setArticleContainersToShow] = useState(3);
+  const articles = chunkedArticlesList.slice(0, articleContainersToShow)
+
+  const handleLoadMore = () => {
+    setArticleContainersToShow(articleContainersToShow + 3);
+  };
+
   return (
     <Layout title="News" description="news">
       <section className={styles.newsSection}>
         <div className={`container ${styles.wrapper}`}>
-          {NewsList.map((props, idx) => (
-            <NewsItem key={idx} index={idx} {...props} />
-          ))}
+          <h3 className={styles.pageHeader}>News</h3>
+            {articles.map((chunk, idx) => (
+              <div key={idx} className="row">
+                {chunk.map((item, itemIndex) => (
+                  <NewsItem key={itemIndex} index={itemIndex} {...item} />
+                ))}
+              </div>
+            ))}
+            {articleContainersToShow < chunkedArticlesList.length && (
+              <div className={styles.loadMoreButtonWrapper}>
+                <button className={clsx("button button--lg", styles.loadMore)} onClick={handleLoadMore}>
+                    LOAD MORE
+                </button>
+              </div>
+            )}
         </div>
       </section>
       <RobotFooterIcon />
