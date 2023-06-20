@@ -1,43 +1,45 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.articleLinkWrapper {
+  display: block;
+  cursor: pointer;
+}
+.articleActiveLink {
+  transition: transform 0.2s; /* Animation */
+}
+.articleActiveLink:hover {
+  transform: scale(1.05);
+}
+.articleDisabledLink {
+  pointer-events: none;
+  cursor: none;
 }
 
 .header {
   font-size: 1.5rem;
   text-align: left;
   margin: 0;
+  color: #fff;
 }
 .pageHeader {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 4rem;
 }
-.styledHr {
-  margin: 70px 0;
-  height: 2px;
-  background-color: #82caea;
-}
+
 .wrapper {
   margin: 50px auto;
 }
 
 .imgContainer {
   height: 220px;
+  display: block;
 }
 
 .img {
-  /* border: 1px solid rgba(0, 50, 87, 0.2); */
   width: 100%;
   height: 100%;
   object-fit: contain;
   overflow: hidden;
 }
-.oddContainer {
-  flex-direction: row-reverse;
-}
+
 .newsSection {
   background: linear-gradient(
     180deg,
@@ -66,26 +68,30 @@
 
 .linkDescriptionText {
   margin: 0;
+  color: #fff;
 }
 
 .linkDescriptionContainer {
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
+  display: block;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 3;
   line-clamp: 3;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; */
   margin-bottom: 1rem;
   min-height: 80px;
 }
 .linkHeading {
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
+  display: block;
   margin: 1rem 0;
 }
-/** Mobile view */
+
+.MobileArticleLinkWrapper {
+  display: none;
+}
+
+/** Tablet and Mobile view */
 @media screen and (max-width: 996px) {
   .imgContainer {
     height: auto;
@@ -93,13 +99,26 @@
   .item {
     padding: 1.5rem;
   }
-  .pageHeader {
-    margin-bottom: 0;
+  .articleLinkWrapper {
+    pointer-events: none;
+  }
+  .MobileArticleLinkWrapper {
+    display: inline-block;
+    color: #fff;
+    background: var(--ifm-navbar-background-color);
+    border-radius: 25px;
+    padding: 0.8rem 2.5rem 0.7rem 2.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
   }
   .newsLinkBtn {
     margin-top: 0rem;
   }
   .img {
     border: 1px solid rgba(0, 50, 87, 0.2);
+  }
+  .linkDescriptionContainer {
+    margin-bottom: 0;
+    min-height: auto;
   }
 }

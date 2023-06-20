@@ -372,18 +372,28 @@ const renderLinkButton = (link) => {
 function NewsItem({ index, header, description, link, imgSrc }) {
   return (
     <div className={`col col--4 ${styles.item}`}>
-        <div className={styles.imgContainer}>
+      <a 
+        className={
+          link != ""
+            ? `${styles.articleLinkWrapper} ${styles.articleActiveLink}`
+            : `${styles.articleLinkWrapper} ${styles.articleDisabledLink}`
+        }
+        href={link}
+        target="_blank">
+        <span className={styles.imgContainer}>
           <img className={styles.img} src={imgSrc} />
-        </div>
-        <div>
-        <div className={styles.linkHeading}>
-          <h2 className={styles.header}>{header}</h2>
-        </div>
-          <div className={styles.linkDescriptionContainer}>
+        </span>
+          <span className={styles.linkHeading}>
+            <h2 className={styles.header}>{header}</h2>
+          </span>
+          <span className={styles.linkDescriptionContainer}>
             <p className={styles.linkDescriptionText}>{description}</p>
-          </div>
-          {renderLinkButton(link)}
-        </div>
+          </span>
+        </a>
+        <a 
+        className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
+        href={link}
+        target="_blank">Read More</a>
     </div>
   );
 }
@@ -392,7 +402,6 @@ const chunkSize = 3;
 const chunkedNewsList = Array(Math.ceil(NewsList.length / chunkSize))
   .fill()
   .map((_, index) => NewsList.slice(index * chunkSize, (index + 1) * chunkSize));
-
 
 export default function News() {
   return (
