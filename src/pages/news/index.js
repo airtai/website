@@ -380,10 +380,12 @@ function NewsItem({ index, header, description, link, imgSrc }) {
             <p className={styles.linkDescriptionText}>{description}</p>
           </span>
         </a>
-        <a 
-        className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
-        href={link}
-        target="_blank">READ MORE</a>
+        {link != "" && <a 
+            className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
+            href={link}
+            target="_blank">READ MORE
+          </a>
+      }
     </div>
   );
 }
