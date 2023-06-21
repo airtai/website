@@ -1,14 +1,21 @@
 .articleLinkWrapper {
   display: block;
   cursor: pointer;
+  padding: 1rem;
 }
-/* .articleActiveLink {
+.articleActiveLink {
   transition: transform 0.2s;
-} */
-.articleActiveLink:hover {
-  /* transform: scale(1.05); */
-  text-decoration: none;
 }
+
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+  .articleActiveLink:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
 .articleDisabledLink {
   pointer-events: none;
   cursor: none;
@@ -64,7 +71,7 @@
 }
 
 .item {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .linkDescriptionContainer {
@@ -120,6 +127,7 @@
   }
   .articleLinkWrapper {
     pointer-events: none;
+    padding: 0;
   }
   .MobileArticleLinkWrapper {
     display: inline-block;
