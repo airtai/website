@@ -82,8 +82,8 @@ const config = {
                 href: 'https://docs.airt.ai',
               },
               {
-                label: 'FastKafka',
-                href: 'https://fastkafka.airt.ai',
+                label: 'FastStream',
+                href: 'https://faststream.airt.ai',
               }
             ]
           },
@@ -190,8 +190,8 @@ const config = {
                 href: 'https://docs.airt.ai',
               },
               {
-                label: 'FastKafka',
-                href: 'https://fastkafka.airt.ai',
+                label: 'FastStream',
+                href: 'https://faststream.airt.ai',
               }
             ],
           },
