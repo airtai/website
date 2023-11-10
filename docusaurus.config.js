@@ -78,11 +78,7 @@ const config = {
             position: 'right',
             items: [
               {
-                label: 'EventGPT',
-                href: 'https://docs.airt.ai',
-              },
-              {
-                label: 'FastStream',
+                label: 'FastStream framework',
                 href: 'https://faststream.airt.ai',
               }
             ]
@@ -99,11 +95,7 @@ const config = {
               {
                 label: 'Material for nbdev',
                 href: 'https://nbdev-mkdocs.airt.ai',
-              },
-              {
-                label: 'Docstring-gen',
-                href: 'https://docstring-gen.airt.ai',
-              },
+              }
             ]
           },
           {to: 'news', label: 'News', position: 'right', className: "styled-item"},
@@ -186,11 +178,7 @@ const config = {
             title: 'EXPLORE PRODUCTS',
             items: [
               {
-                label: 'EventGPT',
-                href: 'https://docs.airt.ai',
-              },
-              {
-                label: 'FastStream',
+                label: 'FastStream framework',
                 href: 'https://faststream.airt.ai',
               }
             ],
@@ -205,11 +193,7 @@ const config = {
               {
                 label: 'Material for nbdev',
                 href: 'https://nbdev-mkdocs.airt.ai',
-              },
-              {
-                label: 'Docstring-gen',
-                href: 'https://docstring-gen.airt.ai',
-              },
+              }
             ],
           },
           {

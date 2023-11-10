@@ -20,8 +20,7 @@ const FeatureList = [
     src: 'img/bleeding-edge-technology.svg',
     description: (
       <>
-        Incorporated GPT-based model that predicts future events to be streamed, and outperforms 
-        all other alternatives (SOTA results against IBM and Google).
+        Autonomous AI agents for rapid development and deployment of microservices. From problem in plain English to deployable solution in a matter of minutes.
       </>
     ),
   },
@@ -31,8 +30,7 @@ const FeatureList = [
     src: 'img/driving-impact-with-deep-learning.svg',
     description: (
       <>
-        Our model can be used for both standard business predictive analytics and automatic 
-        regression and stress testing of the system.
+        Incorporated GPT-based model that predicts future events to be streamed, and outperforms all other alternatives (SOTA results against IBM and Google).
       </>
     ),
   },
