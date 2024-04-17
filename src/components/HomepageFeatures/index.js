@@ -1,46 +1,42 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'DEV TOOL FOR DATA IN MOTION',
+    title: "MASTER COMPLEXITY WITH SYNERGY",
     // Svg: require('@site/static/img/dev-tool-for-data-in-motion.svg').default,
-    src: 'img/dev-tool-for-data-in-motion.svg',
+    src: "img/Robot_Yes_No_transparent.svg",
     description: (
-      <>
-        Efficient and scalable framework that allows developers to create, test, and 
-        manage microservices for streaming data with ease.
-      </>
+      <>Harness collective intelligence for problem-solving efficiency.</>
     ),
   },
   {
-    title: 'BLEEDING EDGE TECHNOLOGY',
+    title: "FLEXIBLE, SCALABLE INTEGRATION",
     // Svg: require('@site/static/img/bleeding-edge-technology.svg').default,
-    src: 'img/bleeding-edge-technology.svg',
-    description: (
-      <>
-        Autonomous AI agents for rapid development and deployment of microservices. From problem in plain English to deployable solution in a matter of minutes.
-      </>
-    ),
+    src: "img/Robot_winner_transparent.svg",
+    description: <>Create and integrate specialized AI agents seamlessly.</>,
   },
   {
-    title: 'DRIVING IMPACT WITH DEEP LEARNING',
+    title: "EFFORTLESS MULTI-AGENT DEPLOYMENT",
     // Svg: require('@site/static/img/driving-impact-with-deep-learning.svg').default,
-    src: 'img/driving-impact-with-deep-learning.svg',
-    description: (
-      <>
-        Incorporated GPT-based model that predicts future events to be streamed, and outperforms all other alternatives (SOTA results against IBM and Google).
-      </>
-    ),
+    src: "img/bleeding-edge-technology.svg",
+    description: <>Easily launch distributed multi-agent systems.</>,
   },
 ];
 
-function Feature({src, title, description}) {
+function Feature({ src, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <img className={styles.featureSvg} src={src} />
+        <img
+          className={
+            src === "img/Robot_winner_transparent.svg"
+              ? styles.featureSvgAutoWidth
+              : styles.featureSvg
+          }
+          src={src}
+        />
         {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>
       <div className={styles.featureContainer}>
@@ -61,7 +57,7 @@ export default function HomepageFeatures() {
         <div className={clsx('col col--12')}>
           <p className={styles.description}>Some very long placeholder description for airt.........................................</p>
         </div> */}
-        <div className="row">
+        <div className={`row ${styles.featureContainerWrapper}`}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
