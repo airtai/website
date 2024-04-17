@@ -35,7 +35,6 @@ function HomepageHeader() {
               className={styles.heroTextAnimate}
               speed={{ type: "keyStrokeDelayInMs", value: 100 }}
             />
-            &nbsp;in motion
           </h1>
           <img
             className={styles.robotHero}
