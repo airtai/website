@@ -9,8 +9,7 @@ const config = {
   title: "airt",
   tagline: "AI in motion",
   customFields: {
-    description:
-      "Efficient and scalable solution for building AI-powered microservices for streaming data.",
+    description: "Build your own SaaS with our multi-agent AI framework.",
   },
   favicon: "img/AIRT_icon_blue.svg",
 
