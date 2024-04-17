@@ -38,7 +38,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 850px;
   top: 6rem;
   letter-spacing: 0.1rem;
   font-size: 2.5rem;
@@ -83,7 +83,7 @@
     width: 400px;
   }
   .robotHeroContainerHeader {
-    width: 500px;
+    width: 650px;
     font-size: 2rem;
     top: 4.75rem;
   }
@@ -98,15 +98,16 @@
     font-size: 1.3rem;
   }
   .heroTextAnimate {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   .heroDescriptionText {
     font-size: 1rem;
   }
   .robotHeroContainerHeader {
-    width: 300px;
-    font-size: 1.3rem;
-    top: 3.75rem;
+    width: 250px;
+    font-size: 1rem;
+    top: 2.7rem;
+    left: -1rem;
   }
   .robotHero {
     width: 300px;
@@ -130,7 +131,7 @@
   .robotHeroContainerHeader {
     width: 100%;
     font-size: 1rem;
-    top: 2.75rem;
+    top: 2rem;
   }
   .robotHero {
     width: 280px;
