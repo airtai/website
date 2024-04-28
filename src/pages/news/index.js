@@ -1,13 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import clsx from 'clsx';
+import clsx from "clsx";
 
-import RobotFooterIcon from '@site/src/components/RobotFooterIcon';
+import RobotFooterIcon from "@site/src/components/RobotFooterIcon";
 
 import styles from "./styles.module.css";
 
 const NewsList = [
+  {
+    header: "Visionary of the Year",
+    description:
+      "We’re super proud that our co-founders Hajdi and Davor got nominated for the Visionary of the Year award!",
+    link: "https://www.tportal.hr/tehno/clanak/natjecu-s-googleom-a-znanje-dijele-besplatno-za-umjetnu-inteligenciju-kazu-ukrcajte-se-na-vlak-sto-prije-foto-20240129",
+    imgSrc:
+      "https://drive.google.com/file/d/1LfQYRHH51P1Mw_Bt531HIIoIMxV3tRBs/view?usp=sharing",
+  },
+  {
+    header: "Achievement Award for FastStream!",
+    description:
+      "Not only was our FastStream framework selected in the Top100 open-source projects, we also received an award for it at the FICC2023 conference in Sanya, China.",
+    link: "https://novac.jutarnji.hr/novac/startup-report/kinezi-nagradili-hrvatski-ai-startup-airt-na-popisu-top10-open-source-projekata-za-2023-15404987",
+    imgSrc:
+      "https://drive.google.com/file/d/1j1K60G1tTqrZePS9FMX750O7_7blnB7L/view?usp=sharing",
+  },
+  {
+    header: "FastStream among Top100 open-source projects of 2023!",
+    description:
+      "Our FastStream framework was chosen by the BenchCouncil among tens of thousands of candidates to be included among the top 100 achievements of 2023 in the field of open-source, known as Open100.",
+    link: "https://www.benchcouncil.org/evaluation/opencs/annual.html",
+    imgSrc:
+      "https://drive.google.com/file/d/1Mm3tc2zj1ju8bLkGy9M4djrf0HPwEbA1/view?usp=sharing",
+  },
+  {
+    header: "FastKafka + Propan = FastStream",
+    description:
+      "A bit more insight into why we decided to abandon a successful project. Or two.",
+    link: "https://dev.to/airtai/how-we-deprecated-two-successful-projects-and-joined-forces-to-create-an-even-more-successful-one-3lon",
+    imgSrc:
+      "https://drive.google.com/file/d/1vYmcdJipENN5Zz406CW21OTYAj5EK3J-/view?usp=sharing",
+  },
+  {
+    header: "FastStream: bridging the gap between AI and streaming platforms",
+    description:
+      "The story behind developing a framework that would make it easy to develop scalable and robust streaming microservices in Python.",
+    link: "https://shiftmag.dev/fast-stream-python-framework-1646/",
+    imgSrc:
+      "https://drive.google.com/file/d/1zeL0-ml3jiDxEYwdbpCpxAXPBvQzFQar/view?usp=sharing",
+  },
+  {
+    header: "AI game changer of the year",
+    description:
+      "airt received Game Changer Award for being the AI game changer of 2023!.",
+    link: "https://hr.bloombergadria.com/tehnologija/inovacije/30877/dodijeljene-game-changer-nagrade/news/",
+    imgSrc:
+      "https://drive.google.com/file/d/17tr09IG3klgbnK9JrA9vMM6NYy_Whq1u/view?usp=sharing",
+  },
+  {
+    header: "Introducing FastKafka",
+    description:
+      "After publicly announcing it in developers’ communities, our FastKafka took off like crazy! FastKafka is our powerful and easy-to-use Python library for building asynchronous web services that interact with Kafka topics.",
+    link: "https://www.facebook.com/photo/?fbid=688303943093050&set=a.199253245331458",
+    imgSrc:
+      "https://drive.google.com/file/d/1oIrYem9u2G5W_cC_fL2Vsg0eeQDripvs/view?usp=sharing",
+  },
   {
     header: "Patent: issued!",
     description:
@@ -272,8 +328,7 @@ const NewsList = [
     description:
       "Project proposal “Smart damage detection” is implemented with the goal of adjustment and market launch of two innovative products intended for automation of damage detection and processing in industrial environments.",
     link: "https://airt.ai/eu-funded-project",
-    imgSrc:
-      "img/EU_logo_vertical_stripe_black_background.png",
+    imgSrc: "img/EU_logo_vertical_stripe_black_background.png",
   },
   {
     header: "AI in telco industry",
@@ -362,30 +417,34 @@ const NewsList = [
 function NewsItem({ index, header, description, link, imgSrc }) {
   return (
     <div className={`col col--4 ${styles.item}`}>
-      <a 
+      <a
         className={
           link != ""
             ? `${styles.articleLinkWrapper} ${styles.articleActiveLink}`
             : `${styles.articleLinkWrapper} ${styles.articleDisabledLink}`
         }
         href={link}
-        target="_blank">
+        target="_blank"
+      >
         <span className={styles.imgContainer}>
           <img className={styles.img} src={imgSrc} />
         </span>
-          <span className={styles.linkHeading}>
-            <h2 className={styles.header}>{header}</h2>
-          </span>
-          <span className={styles.linkDescriptionContainer}>
-            <p className={styles.linkDescriptionText}>{description}</p>
-          </span>
+        <span className={styles.linkHeading}>
+          <h2 className={styles.header}>{header}</h2>
+        </span>
+        <span className={styles.linkDescriptionContainer}>
+          <p className={styles.linkDescriptionText}>{description}</p>
+        </span>
+      </a>
+      {link != "" && (
+        <a
+          className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
+          href={link}
+          target="_blank"
+        >
+          READ MORE
         </a>
-        {link != "" && <a 
-            className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
-            href={link}
-            target="_blank">READ MORE
-          </a>
-      }
+      )}
     </div>
   );
 }
@@ -393,11 +452,13 @@ function NewsItem({ index, header, description, link, imgSrc }) {
 const chunkSize = 3;
 const chunkedArticlesList = Array(Math.ceil(NewsList.length / chunkSize))
   .fill()
-  .map((_, index) => NewsList.slice(index * chunkSize, (index + 1) * chunkSize));
+  .map((_, index) =>
+    NewsList.slice(index * chunkSize, (index + 1) * chunkSize)
+  );
 
 export default function News() {
   const [articleContainersToShow, setArticleContainersToShow] = useState(3);
-  const articles = chunkedArticlesList.slice(0, articleContainersToShow)
+  const articles = chunkedArticlesList.slice(0, articleContainersToShow);
 
   const handleLoadMore = () => {
     setArticleContainersToShow(articleContainersToShow + 3);
@@ -408,20 +469,23 @@ export default function News() {
       <section className={styles.newsSection}>
         <div className={`container ${styles.wrapper}`}>
           <h3 className={styles.pageHeader}>News</h3>
-            {articles.map((chunk, idx) => (
-              <div key={idx} className="row">
-                {chunk.map((item, itemIndex) => (
-                  <NewsItem key={itemIndex} index={itemIndex} {...item} />
-                ))}
-              </div>
-            ))}
-            {articleContainersToShow < chunkedArticlesList.length && (
-              <div className={styles.loadMoreButtonWrapper}>
-                <button className={clsx("button button--lg", styles.loadMore)} onClick={handleLoadMore}>
-                    LOAD MORE
-                </button>
-              </div>
-            )}
+          {articles.map((chunk, idx) => (
+            <div key={idx} className="row">
+              {chunk.map((item, itemIndex) => (
+                <NewsItem key={itemIndex} index={itemIndex} {...item} />
+              ))}
+            </div>
+          ))}
+          {articleContainersToShow < chunkedArticlesList.length && (
+            <div className={styles.loadMoreButtonWrapper}>
+              <button
+                className={clsx("button button--lg", styles.loadMore)}
+                onClick={handleLoadMore}
+              >
+                LOAD MORE
+              </button>
+            </div>
+          )}
         </div>
       </section>
       <RobotFooterIcon />
