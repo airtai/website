@@ -378,7 +378,10 @@ function NewsItem({ index, header, description, link, imgSrc }) {
         target="_blank"
       >
         <span className={styles.imgContainer}>
-          <img className={styles.img} src={imgSrc} />
+          <img
+            className={styles.img}
+            src={require(`@site/static/${imgSrc}`).default}
+          />
         </span>
         <span className={styles.linkHeading}>
           <h2 className={styles.header}>{header}</h2>
