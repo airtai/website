@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "airt",
-  tagline: "AI in motion",
+  tagline: "Multi-agent AI in action",
   customFields: {
     description: "Build your own SaaS with our multi-agent AI framework.",
   },
