@@ -91,10 +91,6 @@ const config = {
                 label: "FastStream",
                 href: "https://faststream.airt.ai",
               },
-              {
-                label: "Monotonic Neural Networks",
-                href: "https://monotonic.airt.ai",
-              },
             ],
           },
           {
@@ -198,10 +194,6 @@ const config = {
               {
                 label: "FastStream",
                 href: "https://faststream.airt.ai",
-              },
-              {
-                label: "Monotonic Neural Networks",
-                href: "https://monotonic.airt.ai",
               },
             ],
           },
