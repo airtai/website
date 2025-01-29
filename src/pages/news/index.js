@@ -54,7 +54,7 @@ const NewsList = [
     header: "Monotone.ai",
     description:
       "Monotone.ai is a project financed by the European Union - NextGenerationEU.",
-    link: "monotoneai",
+    link: "/monotoneai/",
     imgSrc: "img/news/eu-financed-1.png",
   },
   {
