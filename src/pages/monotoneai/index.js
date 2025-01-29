@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import RobotFooterIcon from "@site/src/components/RobotFooterIcon";
 
@@ -87,7 +88,7 @@ export default function Hello() {
             <div className="col col--12">
               <img
                 className={styles.img}
-                src="img/news/eu-financed-2.png"
+                src={useBaseUrl("/img/news/eu-financed-2.png")}
                 alt="EU Financed"
               />
             </div>
