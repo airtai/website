@@ -51,6 +51,13 @@ const NewsList = [
     imgSrc: "img/news/Game_Changer.jpeg",
   },
   {
+    header: "Monotone.ai",
+    description:
+      "Monotone.ai is a project financed by the European Union - NextGenerationEU.",
+    link: "monotoneai",
+    imgSrc: "img/news/eu-financed-1.png",
+  },
+  {
     header: "Introducing FastKafka",
     description:
       "After publicly announcing it in developers’ communities, our FastKafka took off like crazy! FastKafka is our powerful and easy-to-use Python library for building asynchronous web services that interact with Kafka topics.",
@@ -375,7 +382,7 @@ function NewsItem({ index, header, description, link, imgSrc }) {
             : `${styles.articleLinkWrapper} ${styles.articleDisabledLink}`
         }
         href={link}
-        target="_blank"
+        target={link.startsWith("http") ? "_blank" : "_self"}
       >
         <span className={styles.imgContainer}>
           <img

@@ -1,0 +1,57 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+.sectionContainer {
+  min-height: 800px;
+}
+
+.header {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.bold {
+  text-decoration: underline;
+}
+.reducedLineHeight {
+  line-height: 0.6em;
+  font-size: 1rem;
+}
+
+.sectionContainer {
+  min-height: 750px;
+}
+
+.img {
+  margin-bottom: 1rem;
+}
+
+/** 4K Desktop view */
+@media screen and (min-width: 2000px) {
+  .sectionContainer {
+    min-height: 1150px;
+  }
+}
+
+/** Tablet view */
+@media screen and (max-width: 1290px) {
+  .sectionContainer {
+    min-height: 600px;
+  }
+}
+
+/** Mobile view */
+@media screen and (max-width: 996px) {
+  .header {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reducedLineHeight {
+    line-height: 1.3em;
+  }
+}
