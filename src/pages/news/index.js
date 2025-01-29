@@ -401,7 +401,7 @@ function NewsItem({ index, header, description, link, imgSrc }) {
         <a
           className={clsx("button button--lg", styles.MobileArticleLinkWrapper)}
           href={link}
-          target="_blank"
+          target={link.startsWith("http") ? "_blank" : "_self"}
         >
           READ MORE
         </a>
